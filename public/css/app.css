@@ -1,0 +1,57 @@
+/* CSS HEX */
+/* CSS HSL */
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+body {
+  font-family: "lato", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+  color: #232323;
+  background: #cbff47;
+}
+
+nav li:last-child {
+  background: #FE5F1E;
+  border-radius: 30px;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2F4B2F;
+}
+nav li a:hover {
+  color: #b23301;
+}
+
+.left_side1 {
+  color: #2F4B2F;
+}
+
+.left_side2 {
+  color: #2F4B2F;
+}
+
+.hero {
+  background-image: url("/public/img/section1.png");
+}
+
+.size {
+  background: #84e561;
+}
+
+.add-to-cart {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #FE5F1E;
+  border-color: #fff;
+  color: #fff;
+}
