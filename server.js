@@ -18,8 +18,22 @@ app.get('/',(req,res)=>{
     res.render('home')
     // res.send('hello world')
 })
+
+app.get('/cart',(req,res)=>{
+    res.render('coustomers/cart')
+})
+
 app.get('/about',(req,res)=>{
     res.render('index')
+    // res.send('hello world')
+})
+
+app.get('/login',(req,res)=>{
+    res.render('auth/login')
+    // res.send('hello world')
+})
+app.get('/register',(req,res)=>{
+    res.render('auth/register')
     // res.send('hello world')
 })
 

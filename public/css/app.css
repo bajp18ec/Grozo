@@ -55,3 +55,11 @@ nav li a:hover {
   border-color: #fff;
   color: #fff;
 }
+
+.btn-primary {
+  background-color: #FE5F1E;
+}
+
+h2.sign {
+  color: #2f4b2f;
+}
