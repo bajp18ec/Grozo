@@ -14,6 +14,7 @@
 <body>
     <!-- <h1>Login page</h1>
      -->
+     <%- include('../partials/nav.ejs') %> 
     <div class="min-h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
@@ -24,7 +25,12 @@
                 </h2>
 
             </div>
-            <form class="mt-8 space-y-6" action="#" method="POST">
+            <form class="mt-8 space-y-6" action="/login" method="POST">
+
+                <% if(messages.error) { %> 
+                    <span class="text-red-500 txt-sm"><%= messages.error %> </span>
+                    <% } %> 
+                    
                 <input type="hidden" name="remember" value="true">
                 <div class="rounded-md shadow-sm -space-y-px">
                     <div>

@@ -10,6 +10,7 @@ function cartNum(res)
     cartQuan.innerText = res.data.totqty
 }
 function UpdateCart(grozo) {
+    console.log(grozo)
     axios.post('/update-cart',grozo)
     .then(res =>{
         cartNum(res)
@@ -35,6 +36,8 @@ addTocart.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         // console.log(e)
         let grozo = JSON.parse(btn.dataset.grozo)
+        console.log(grozo)
         UpdateCart(grozo)
     })
 })
+

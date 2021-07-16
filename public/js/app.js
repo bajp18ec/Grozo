@@ -1857,6 +1857,7 @@ function cartNum(res) {
 }
 
 function UpdateCart(grozo) {
+  console.log(grozo);
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', grozo).then(function (res) {
     cartNum(res);
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
@@ -1881,6 +1882,7 @@ addTocart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     // console.log(e)
     var grozo = JSON.parse(btn.dataset.grozo);
+    console.log(grozo);
     UpdateCart(grozo);
   });
 });
@@ -1891,6 +1893,19 @@ addTocart.forEach(function (btn) {
 /*!*********************************!*\
   !*** ./resources/scss/app.scss ***!
   \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/scss/adminhome.scss":
+/*!***************************************!*\
+  !*** ./resources/scss/adminhome.scss ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5331,6 +5346,7 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/public/js/app": 0,
+/******/ 			"public/css/adminhome": 0,
 /******/ 			"public/css/app": 0
 /******/ 		};
 /******/ 		
@@ -5379,8 +5395,9 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/adminhome","public/css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/adminhome","public/css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/adminhome","public/css/app"], () => (__webpack_require__("./resources/scss/adminhome.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

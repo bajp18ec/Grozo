@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Uploading</title>
+	<link rel = "stylesheet" href="/css/adminhome.css">
+	 <link rel="preconnect" href="https://fonts.gstatic.com">
+	 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+	 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+	
+	<%- include('../partials/adminsidebar.ejs') %> 
+	<div class="home_content">
+		<div class="text">
+			<form action="/categories/image" method="POST" enctype="multipart/form-data">
+				<div>
+					<label for="name">Image Title</label>
+					<input type="text" id="name" placeholder="Name"
+					 name="name" required>
+				</div>
+				<div>
+					<label for="desc">Image Description</label>
+					<textarea id="desc" name="desc"  rows="2"
+							placeholder="Description" required>
+					</textarea>
+				</div>
+				<div>
+					<label for="image">Upload Image</label>
+					<input type="file" id="image" name="image" value="" required>
+				</div>
+				<div>
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- <script src="/js/admin.js"></script> -->
+	
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+     <!-- <link rel="stylesheet" href="/css/app.css"> -->
+     <link rel = "stylesheet" href="/css/adminhome.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <title>Document</title>
+ </head>
+ <body>
+
+    <%- include('../partials/adminsidebar.ejs') %>
+
+    <div class="home_content">
+        <div class=text>
+            <form action="/shopdata" method="POST"  enctype="multipart/form-data">
+                <div>
+                    <label for="RetailerName">RetailerName</label>
+                    <input type="text" name="RetailerName" id=""  placeholder="RetailerName">
+                </div>
+                <div>
+                    <label for="RetailShopName">RetailShopName</label>
+                    <input type="text" name="RetailShopName" id=""  placeholder="RetailShopName">
+                </div>
+                <div>
+                    <label for="RetailMobile">RetailMobile</label>
+                    <input type="text" name="RetailMobile" id=""  placeholder="RetailMobile">
+                </div>
+                <div>
+                    <label for="RetailAdress">RetailAdress</label>
+                    <textarea name="RetailAdress" id="" cols="20" rows="3" ></textarea>
+                </div>
+                <div>
+                    <label for="ShopImage">ShopImage</label>
+                    <input type="file" name="ShopImage" id=""  placeholder="ShopImage">
+                </div>
+
+                <div>
+					<button type="submit">Submit</button>
+				</div>
+
+            </form>
+        </div>
+    </div>
+    
+                                                                                                                                                               
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/admin.js"></script>
+    
+ </body>
+ </html>
