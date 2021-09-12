@@ -11,6 +11,8 @@ const flash = require('express-flash')
 const MongoStore = require('connect-mongo')
 const bodyParser = require('body-parser')
 const passport = require('passport')
+const Emitter = require('events')
+
 const port = process.env.PORT || 3300
 
 
@@ -42,6 +44,10 @@ app.use(session({
     saveUninitialized:false,
     cookie:{maxAge:100*60*60*24} // 24 hours
 }))
+
+//Event emitter
+const eventEmitter = new Emitter()
+app.set('eventEmitter',eventEmitter)
 
 //passport config
 const passportinit = require('./app/config/passport')
@@ -77,6 +83,25 @@ app.use(bodyParser.json({limit:'2gb',extended:true}))
 // app.use(bodyParser.text({limit:'200mb',extended:true}))
 
 require('./routes/web')(app)
-app.listen(port, (req, res) => {
+
+const server = app.listen(port, (req, res) => {
     console.log(`listinig on port ${port}`)
+})
+
+//socket conection
+
+const io = require('socket.io')(server)
+io.on('connection', (socket) => {
+      // Join
+      socket.on('join', (orderId) => {
+        socket.join(orderId)
+      })
+})
+
+eventEmitter.on('orderUpdated', (data) => {
+    io.to(`order_${data.id}`).emit('orderUpdated', data)
+})
+
+eventEmitter.on('orderPlaced', (data) => {
+    io.to('adminRoom').emit('orderPlaced', data)
 })
